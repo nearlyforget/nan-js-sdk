@@ -1,5 +1,5 @@
 {
-  "name": "@ucp/sdk",
+  "name": "@ucp-js/sdk",
   "version": "0.1.0",
   "description": "UCP SDK for JavaScript",
   "license": "Apache-2.0",
@@ -21,6 +21,7 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json && echo '{\"type\": \"module\"}' > dist/esm/package.json",
     "build:types": "tsc -p tsconfig.types.json",
+    "build:noEmit": "tsc --noEmit",
     "generate": "./generate_models.sh",
     "prepublishOnly": "npm run build"
   },
@@ -30,5 +31,9 @@
   "devDependencies": {
     "quicktype": "^23.2.6",
     "typescript": "^5.4.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }
