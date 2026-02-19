@@ -1,4 +1,5 @@
 #!/bin/bash
+# Copyright 2026 UCP Authors
 
 if [[ -z "$1" ]]; then
   echo "Error: spec directory path is required."
